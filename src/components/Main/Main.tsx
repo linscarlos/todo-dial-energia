@@ -46,7 +46,7 @@ export function Main(){
 
         setNewTaskName('')
         setNewTaskDescription('')
-        setNewTaskAttr('')
+        setNewTaskAttr('Compras')
         setNewDuration(0)
       }
 

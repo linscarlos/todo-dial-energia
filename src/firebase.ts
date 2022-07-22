@@ -3,19 +3,13 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from '@firebase/firestore'
 
 const firebaseConfig = {
-
-  apiKey: "AIzaSyC1cfxjOlyMVqcGcjzH7OFJU9z_xJui8X4",
-
-  authDomain: "energia-dial-2.firebaseapp.com",
-
-  projectId: "energia-dial-2",
-
-  storageBucket: "energia-dial-2.appspot.com",
-
-  messagingSenderId: "933120890090",
-
-  appId: "1:933120890090:web:cac130e8a706ee6ec87393"
-
+  apiKey: "AIzaSyBvQpcfnYWHgS1Mz3iu0Ly75yMN7RVgfuQ",
+  authDomain: "to-do-dial-energia.firebaseapp.com",
+  projectId: "to-do-dial-energia",
+  storageBucket: "to-do-dial-energia.appspot.com",
+  messagingSenderId: "734490312992",
+  appId: "1:734490312992:web:8f8e58f6003a63c70b9745",
+  measurementId: "G-5JYZLVLD61"
 };
 
 

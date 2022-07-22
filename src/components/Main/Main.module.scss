@@ -1,0 +1,367 @@
+.mainContainer{
+    width: 100%;
+    margin-top: -2.6rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .mainContent {
+        width: 73.6rem;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .newToDo {
+            // height: 5.4rem;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.8rem;
+            flex-direction: column;
+
+            textarea, button, select, input{
+                height: 5.4rem;
+                padding: 1.6rem;
+                border: 1px solid var(--gray-700);
+                border-radius: 8px;
+                resize: none;
+                background: var(--gray-500);
+                font-size: 1.6rem;
+            }
+            
+            textarea{
+                width: 73.8rem;
+            }
+
+            .containerDateAndSelect {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                gap: 0.5rem;
+
+                select {
+                    color: #FFFFFF;
+                    width: 50%;
+                }
+
+                input {
+                    width: 50%;
+                }
+
+                .dateAndHour {
+                    width: 100%;
+                    color: #FFFFFF;
+                }
+
+                input::-webkit-calendar-picker-indicator {
+                    filter: invert(1);
+                }
+            }
+
+            
+            button{
+                background: var(--blue);
+                color: var(--gray-100);
+                font-size: 1.4rem;
+                font-weight: bold;
+            
+                border-radius: 8px;
+            
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.8rem;
+            }
+        }
+
+        .toDoContent {
+            margin-top: 6.4rem;
+            width: 73.6rem;
+
+            .controlTask {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            
+                font-size: 1.4rem;
+                font-weight: bold;
+                line-height: 1.694rem;
+
+                .orderList{
+                    display: flex;
+                    p {
+                        margin-right: 6px;
+                    }
+                }
+
+                .listOrderMonth{
+                    border: 1px solid var(--gray-700);
+                    border-radius: 8px;
+                    resize: none;
+                    background: var(--gray-500);
+                    color: #FFFFFF;
+                    padding: 2px;
+                    select{
+                        color: #FFFFFF;
+
+                    }
+                    
+                }
+            }
+            
+            .controlTask p:nth-child(1) {
+                color: var(--blue);
+            }
+            
+            .controlTask p:nth-child(2) {
+                color: var(--purple);
+            }
+
+            .taskCount {
+                color: var(--gray-100);
+                padding: 2px 8px;
+                margin-left: 0.8rem;
+            
+                background: var(--gray-400);
+                border-radius: 9px;
+            }
+            
+            .listToDo {
+                margin-top: 2.4rem;
+                border-top: 1px solid var(--gray-400);
+                border-radius: 8px;
+            
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                img{
+                    margin-top: 6.4rem;
+                }
+                
+                strong{
+                    margin-top: 1.6rem;
+                }
+                
+                strong, p {
+                    color: var(--gray-300);
+                    font-size: 1.6rem;
+                    line-height: 140%;
+                }
+            }
+
+            .listToDoFill{
+                margin-top: 2.4rem;
+                width: 100%;
+            
+                display: flex;
+                gap: 1.6rem;
+                flex-direction: column;
+
+                .taskInput{
+                    display: flex;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    gap: 1.2rem;
+                    
+                
+                    font-size: 1.4rem;
+                    line-height: 140%;
+                    padding: 1.6rem;
+                
+                    background: var(--gray-500);
+                    border: 1px solid var(--gray-500);
+                    border-radius: 8px;
+
+                    .nameAndDeleteTask{
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: space-between;
+                        width: 100%;
+                    }
+
+                    .descriptionTask{
+                        margin-left: 8px;
+                        width: 100%;
+                        
+                    }
+
+                    .separatorList{
+                        border-top: 1px solid var(--gray-400);
+                        width: 100%;
+                    }
+
+                    span{
+                        width: 92%;
+                    }
+
+                    input[type="checkbox"] {
+                        appearance: none;
+                        width: 1.8rem;
+                        height: 1.8rem;
+                        border: 2px solid var(--blue);
+                        border-radius: 50%;
+                    
+                        transition: filter 0.2s;
+                    }
+
+                    input[type="checkbox"]:hover {
+                        filter: brightness(0.9);
+                        border-color: (--blue-dark);
+                    }
+
+                    input[type="checkbox"]:checked {
+                        appearance: none;
+                        background-image: url(../../images/check.svg);
+                        border: 0;
+                        background-position: center;
+                    }
+
+                    input[type="checkbox"]:checked ~ span{
+                        text-decoration: line-through;
+                        color: var(--gray-300);
+                    }
+
+                    input[type="checkbox"]:checked:hover {
+                        filter: brightness(1.2);
+                    }
+
+                    button {
+                        background: transparent;
+                        border: 0;
+                        color: var(--gray-300);
+                        cursor: pointer;
+                        line-height: 0;
+                        border-radius: 2px;
+                    }
+
+                    button:hover {
+                        color: var(--danger);
+                    }
+                }
+            }
+                    
+        }
+    }
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 780px){
+    .mainContainer{
+        padding-bottom: 2rem;
+
+        .mainContent {
+            width: 53.6rem;
+
+            .newToDo {
+                textarea{
+                    width: 53.8rem;
+                }
+            }
+
+            .toDoContent {
+                width: 53.6rem;
+
+                .listToDoFill{
+    
+                    .taskInput{
+    
+                        .nameAndDeleteTask{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            width: 100%;
+                            flex-direction: column;
+                            
+                            span{
+                                text-align: center;
+                            }
+                        }
+                }
+            }
+        }
+    }
+}
+}
+
+@media (max-width: 560px){
+    .mainContainer{
+        padding-bottom: 2rem;
+
+        .mainContent {
+            width: 43.6rem;
+
+            .newToDo {
+                textarea{
+                    width: 43.8rem;
+                }
+            }
+
+            .toDoContent {
+                width: 43.6rem;
+            }
+    }
+}
+}
+
+@media (max-width: 460px){
+    .mainContainer{
+        padding-bottom: 2rem;
+
+        .mainContent {
+            width: 33.6rem;
+
+            .newToDo {
+                .containerDateAndSelect {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+
+                    select {
+                        width: 100%;
+                    }
+    
+                    input {
+                        width: 100%;
+                    }
+                }
+
+                textarea{
+                    width: 33.8rem;
+                }
+            }
+
+            .toDoContent {
+                width: 33.6rem;
+            }
+    }
+}
+}
+
+@media (max-width: 360px){
+    .mainContainer{
+        padding-bottom: 2rem;
+
+        .mainContent {
+            width: 23.6rem;
+
+            .newToDo {
+
+                textarea{
+                    width: 23.8rem;
+                }
+            }
+
+            .toDoContent {
+                width: 23.6rem;
+            }
+    }
+}
+}
